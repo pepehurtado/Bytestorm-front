@@ -14,7 +14,7 @@
   <v-row>
         <v-hover v-slot="{ isHovering, props }" >
           <v-card 
-          class="carta"
+          class="mx-auto carta"
             v-bind="props"
           >
           <v-img src="../../public/crearMision.jpeg"></v-img>
@@ -234,7 +234,7 @@
             <v-form @submit.prevent="crearOperativo(name, rol)">
               <v-text-field v-model="name" label="Nombre"></v-text-field>
               <v-text-field v-model="rol" label="Rol"></v-text-field>
-              <v-btn type="submit" @click="showCrearOperativoDialog = false">Crear Operativo</v-btn>
+              <v-btn class="startDialog" type="submit" @click="showCrearOperativoDialog = false">Crear Operativo</v-btn>
             </v-form>
           </v-card-text>
         </v-card>
@@ -296,7 +296,7 @@
       &nbsp;&nbsp;&nbsp;&nbsp;{{ mision.descripcion }} con ID {{ mision.id }}
             </li>
           </ul>
-              <v-btn type="submit" @click="showEliminarOperativoDialog = false">Eliminar Operativo</v-btn>
+              <v-btn type="submit" class="closeDialog" @click="showEliminarOperativoDialog = false">Eliminar Operativo</v-btn>
             </v-form>
           </v-card-text>
         </v-card>
@@ -342,7 +342,7 @@
                 label="Estado de la misión"
                :items="['Planificada', 'Asignada', 'En Uso']"
       ></v-combobox>
-              <v-btn type="submit" @click="showCrearMisionDialog = false;">Crear Mision</v-btn>
+              <v-btn class="startDialog" type="submit" @click="showCrearMisionDialog = false;">Crear Mision</v-btn>
             </v-form>
           </v-card-text>
         </v-card>
@@ -386,7 +386,7 @@
                label="Tipo del equipo"
                :items="['Hardware', 'Software']"
       ></v-combobox>
-              <v-btn type="submit" @click="showCrearEquipoDialog = false;">Crear Equipo</v-btn>
+              <v-btn type="submit" class="startDialog" @click="showCrearEquipoDialog = false;">Crear Equipo</v-btn>
             </v-form>
           </v-card-text>
         </v-card>
@@ -500,5 +500,5 @@
     </script>
     
     <style>
-    @import "@/styles/styles.css"
+    @import "../styles/styles.css"
     </style>
