@@ -18,9 +18,7 @@
     
           <v-hover  v-slot="{ isHovering, props }">
             <v-card
-              class="mx-auto"
-              width="320"
-              height="400"
+              class="mx-auto carta"
               v-bind="props"
             >
             <v-img src="../../public/crearOperativo.jpeg"></v-img>
@@ -40,42 +38,15 @@
                 scrim="#036358"
                 class="align-center justify-center"
               >
-              <v-btn @click="showCrearOperativoDialog = true" variant="flat">Crear Operativo</v-btn>
+              <v-btn class="startDialog" @click="showCrearOperativoDialog = true" variant="flat">Crear Operativo</v-btn>
               </v-overlay>
             </v-card>
           </v-hover>
+          
           <v-hover v-slot="{ isHovering, props }">
             <v-card
-            class="mx-auto"
-              width="320"
-              height="400"
-              v-bind="props"
-            >
-            <v-img src="../../public/listarOperativo.jpeg"></v-img>
-    
-              <v-card-text>
-                <h2 class="text-h6 text-primary">
-                  Listar Operativos
-                </h2>
-                Muestra un listado de todos los operativos
-              </v-card-text>
-    
-    
-              <v-overlay
-                :model-value="isHovering"
-                contained
-                scrim="#036358"
-                class="align-center justify-center"
-              >
-              <v-btn color="blue" variant="flat text" @click=" showGetOperativosDialog= true ; verOperativos()">Ver operativos</v-btn>
-              </v-overlay>
-            </v-card>
-          </v-hover>
-          <v-hover v-slot="{ isHovering, props }">
-            <v-card
-            class="mx-auto"
-              width="320"
-              height="400"
+             class="mx-auto carta"
+
               v-bind="props"
             >
             <v-img src="../../public/añadirMisionaOperativo.jpeg"></v-img>
@@ -94,7 +65,7 @@
                 scrim="#036358"
                 class="align-center justify-center"
               >
-                <v-btn variant="flat" @click="showAñadirMisionOperativo=true; verMisiones(); verOperativos()">Añadir</v-btn>
+                <v-btn class="addToNew" variant="flat" @click="showAñadirMisionOperativo=true; verMisiones(); verOperativos()">Añadir</v-btn>
               </v-overlay>
             </v-card>
           </v-hover>
@@ -198,14 +169,14 @@
           </v-card-title>
 
           <v-card-subtitle v-if="esComandante()">
-            <v-btn class="boton-azul mr-2" @click="putId = objeto.id; putName = objeto.name; putRol = objeto.rol; showModificarOperativoDialog = true">
+            <v-btn class="boton-azul" @click="putId = objeto.id; putName = objeto.name; putRol = objeto.rol; showModificarOperativoDialog = true">
               Modificar
             </v-btn>
             
             <v-btn class="boton-rojo" @click="putId = objeto.id; putName = objeto.name; putRol = objeto.rol; showEliminarOperativoDialog = true; obj = objeto; console.log(userRol)">
               Eliminar
             </v-btn>
-            <v-btn color="primary" @click="opId = objeto.id; showAñadirMisionOperativo = true; verMisiones();">
+            <v-btn class="boton-amarillo" @click="opId = objeto.id; showAñadirMisionOperativo = true; verMisiones();">
               Añadir Misión
             </v-btn>
           </v-card-subtitle>
@@ -273,7 +244,6 @@ onMounted(() => {
 });
       const userRol = ref('');
       const showCrearOperativoDialog = ref(false);
-      const showGetOperativosDialog = ref(false);
       const showAñadirMisionOperativo = ref(false);
       const showModificarOperativoDialog = ref(false);
       const showEliminarOperativoDialog = ref(false);
@@ -338,5 +308,5 @@ onMounted(() => {
       </script>
       
       <style>
-      @import "@/styles/styles.css"
+      @import "../styles/styles.css"
       </style>

@@ -118,7 +118,7 @@
                 scrim="#036358"
                 class="align-center justify-center"
               >
-                <v-btn variant="flat" @click=" showAñadirEquipoMision=true; verMisiones(); verEquipos()">Añadir</v-btn>
+                <v-btn class="addToNew" variant="flat" @click=" showAñadirEquipoMision=true; verMisiones(); verEquipos()">Añadir</v-btn>
               </v-overlay>
             </v-card>
           </v-hover>
@@ -274,5 +274,5 @@
       </script>
       
       <style>
-      @import "@/styles/styles.css"
+      @import "../styles/styles.css"
       </style>

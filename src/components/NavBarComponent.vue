@@ -17,28 +17,28 @@
       class="nav-link menu"
       :class="{ active: isRouteActive('/menu') }"
     >
-      Inicio
+      INICIO
     </router-link>
     <router-link
       to="/operativo"
       class="nav-link operativo"
       :class="{ active: isRouteActive('/operativo') }"
     >
-      Operativo
+      OPERATIVO
     </router-link>
     <router-link
       to="/mision"
       class="nav-link mision"
       :class="{ active: isRouteActive('/mision') }"
     >
-      Mision
+      MISION
     </router-link>
     <router-link
       to="/equipo"
       class="nav-link equipo"
       :class="{ active: isRouteActive('/equipo') }"
     >
-      Equipo
+      EQUIPO
     </router-link>
 
     <v-spacer></v-spacer>
@@ -62,14 +62,6 @@
       <v-list-item-title>{{ userFullname }}({{ userRole }})</v-list-item-title>
       <v-list-item-subtitle>{{ userCorreo }}</v-list-item-subtitle>
     </v-list-item-content>
-    <template v-slot:append>
-      <v-btn
-        variant="text"
-        :class="fav ? 'text-red' : ''"
-        icon="mdi-heart"
-        @click="fav = !fav"
-      ></v-btn>
-    </template>
   </v-list-item>
 </v-list>
 
@@ -89,7 +81,7 @@
             <v-switch
               v-model="hints"
               color="purple"
-              label="Habilitar sugerencias"
+              label="Habilitar Notificaciones"
               hide-details
             ></v-switch>
           </v-list-item>
@@ -172,6 +164,7 @@ export default {
   transition: color 0.3s;
   text-decoration: none;
   border-radius: 10px;
+  
 }
 
 .perfil-button:hover{
@@ -184,8 +177,10 @@ export default {
 
 .nav-link.operativo:hover,
 .nav-link.mision:hover,
+.nav-link.menu:hover,
 .nav-link.equipo:hover {
   color: blue !important;
+  background-color: rgb(166, 166, 166);
 }
 
 /* Estilos cuando el botón está activo */

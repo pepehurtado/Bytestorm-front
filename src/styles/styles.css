@@ -1,39 +1,84 @@
-/* estilos.css */
-
-/* Estilo para botones azules */
-.boton-azul {
-    background-color: rgb(87, 185, 255);
-    color: white;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-  }
+.carta{
+  width: 320px;
+  height: 400px;
+  margin: 10px;
   
-  /* Estilo para botones rojos */
-  .boton-rojo {
-    background-color: red;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-  }
+}
+
+.startDialog:hover{
+  background-color: rgb(88, 254, 55);
+}
+
+.startList:hover{
+  background-color: rgb(222, 255, 101);
+}
+
+.addToNew:hover{
+  background-color: rgb(101, 217, 255);
+}
+
+.closeDialog{
+  background-color: rgb(255, 0, 0);
+  color:white;
+}
+
+.closeDialog:hover{
+  background-color: rgb(255, 255, 255);
+  color: red;
+}
+
+
+button + button{
+  margin-left: 20px;
+}
+
+.boton-azul {
+  background-color: rgb(87, 185, 255);
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+}
+
+/* Estilo para botones rojos */
+.boton-rojo {
+  background-color: red;
+  color: white;
+  padding: 5x 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 10px;
+}
+
+.boton-amarillo {
+  background-color: rgb(117, 167, 0);
+  color: white;
+  padding: 5x 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 10px;
+}
 
 
 .cabeceraOP{
-  color:#009900; 
-  font-size:50px;
-  font-style:italic; 
-  text-align:center;
+color:#009900; 
+font-size:50px;
+font-style:italic; 
+text-align:center;
 }
